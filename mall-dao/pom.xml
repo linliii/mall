@@ -12,5 +12,18 @@
     <artifactId>mall-dao</artifactId>
     <packaging>jar</packaging>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.yi10bio</groupId>
+            <artifactId>mall-model</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.yi10bio</groupId>
+            <artifactId>mall-utils</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
 
 </project>
