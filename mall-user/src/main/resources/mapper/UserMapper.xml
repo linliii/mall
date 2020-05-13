@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yishi.mall.user.mapper.UserMapper">
+    <sql id="columns">
+    id, mobile, password, qq, email, photo_url, nick_name, register_date, create_time, update_time
+  </sql>
+    <select id="getById" resultType="com.yishi.mall.user.model.User">
+        select
+        <include refid="columns"/>
+        from t_user
+        where id = #{id}
+    </select>
+</mapper>
