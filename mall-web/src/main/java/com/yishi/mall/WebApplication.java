@@ -1,9 +1,12 @@
 package com.yishi.mall;
 
+import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
-@SpringBootApplication
+@SpringBootApplication(exclude= {DataSourceAutoConfiguration.class})
+@EnableDubbo(scanBasePackages = "com.yishi.mall")
 public class WebApplication {
 
     public static void main(String[] args) {
