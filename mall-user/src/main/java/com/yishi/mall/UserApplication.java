@@ -1,5 +1,6 @@
 package com.yishi.mall;
 
+import lombok.SneakyThrows;
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.CommandLineRunner;
@@ -16,6 +17,14 @@ public class UserApplication implements CommandLineRunner {
 
   @Override
   public void run(String... args) throws Exception {
-    Thread.currentThread().join();
+    new Thread(new Runnable() {
+      @SneakyThrows
+      @Override
+      public void run() {
+        Thread.currentThread().join();
+      }
+    }).start();
+
+//    Thread.currentThread().join();
   }
 }
