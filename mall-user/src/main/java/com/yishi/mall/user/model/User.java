@@ -1,6 +1,5 @@
 package com.yishi.mall.user.model;
 
-import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Date;
 import lombok.Data;

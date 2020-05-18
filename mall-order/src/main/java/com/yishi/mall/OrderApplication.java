@@ -15,7 +15,13 @@ public class OrderApplication implements CommandLineRunner {
   }
 
   @Override
-  public void run(String... args) throws Exception {
-    Thread.currentThread().join();
+  public void run(String... args) {
+    new Thread(() -> {
+      try {
+        Thread.currentThread().join();
+      } catch (InterruptedException e) {
+        e.printStackTrace();
+      }
+    }).start();
   }
 }

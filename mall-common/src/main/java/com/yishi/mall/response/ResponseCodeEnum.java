@@ -5,6 +5,7 @@ package com.yishi.mall.response;
  */
 public enum ResponseCodeEnum {
     SUCCESS(0, "SUCCESS"),
+    NOT_LOGIN(1, "未登录"),
     REQUEST_ERROR(100, "请求错误"),
     APP_KEY_NOT_FOUND(101, "缺少appKey"),
     SYSTEM_ERROR(999, "系统异常");
