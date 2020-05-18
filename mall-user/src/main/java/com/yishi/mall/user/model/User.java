@@ -1,5 +1,6 @@
 package com.yishi.mall.user.model;
 
+import com.mysql.cj.x.protobuf.MysqlxDatatypes.Scalar.String;
 import java.time.LocalDateTime;
 import java.util.Date;
 import lombok.Data;

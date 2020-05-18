@@ -22,6 +22,7 @@ public class UserInfo implements Serializable {
   private String photoUrl;
 
   private String nickName;
+
   private Integer state;
 
   private Date registerDate;
